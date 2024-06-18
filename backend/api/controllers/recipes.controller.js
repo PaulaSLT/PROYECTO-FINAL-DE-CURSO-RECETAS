@@ -31,7 +31,7 @@ async function getOneRecipe(req,res){
 async function createRecipe(req, res) {
   try {
     const recipe = await Recipe.create(req.body)
-    res.status(200).send("Recipe created!").json(recipe)
+    res.status(200).json({message: 'Recipe created', recipe})
 
   } catch (error) {
     res.status(404).send(error.message)

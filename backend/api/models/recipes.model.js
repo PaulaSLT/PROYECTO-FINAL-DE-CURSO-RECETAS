@@ -12,7 +12,7 @@ const Recipe = sequelize.define('recipe', {
       },
     strIngredients: {
         type: DataTypes.TEXT,
-        allowNull: true,
+        allowNull: false,
         get() {
           const strIngredients = this.getDataValue('strIngredients');
           return strIngredients ? JSON.parse(strIngredients) : [];
@@ -29,8 +29,9 @@ const Recipe = sequelize.define('recipe', {
 
     strMealThumb: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       }, 
+
 }, 
 {timestamps: false}
 )
