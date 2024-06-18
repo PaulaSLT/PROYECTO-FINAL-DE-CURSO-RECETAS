@@ -31,5 +31,7 @@ const Recipe = sequelize.define('recipe', {
         type: DataTypes.STRING,
         allowNull: false,
       }, 
-})
+}, 
+{timestamps: false}
+)
 module.exports = Recipe
