@@ -26,6 +26,7 @@ const User = sequelize.define('user', {
     
   }
  
-})
+},{timestamps: false})
+
 
 module.exports = User

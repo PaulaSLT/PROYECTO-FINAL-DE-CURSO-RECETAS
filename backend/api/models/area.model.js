@@ -8,6 +8,8 @@ const Area = sequelize.define('area', {
     allowNull: false,
   },
 
-})
+},
+{timestamps: false}
+)
 
 module.exports = Area
