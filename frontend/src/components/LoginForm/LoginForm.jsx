@@ -18,7 +18,7 @@ function LoginForm() {
         localStorage.setItem('token', response.token )
 
       } else {
-        setErrs('Todos los campos deben estar rellenos')
+        setErrs("All fields should be completed ");
       }
       
     } catch (error) {
@@ -31,7 +31,7 @@ function LoginForm() {
     <>
       <form className="form">
         <input
-          placeholder="Introduce el email"
+          placeholder="Enter your email"
           type="email"
           onChange={(event) => setEmail(event.target.value)}
         />
@@ -39,7 +39,7 @@ function LoginForm() {
 
 
         <input
-          placeholder="Introduce tu contraseña"
+          placeholder="Enter your password"
           type="password"
           onChange={(event) => setPassword(event.target.value)}
         />
@@ -48,7 +48,7 @@ function LoginForm() {
           <span>{errs}</span>
         )}
 
-        <button onClick={handleClick}>Enviar</button>
+        <button onClick={handleClick}>Submit</button>
       </form>
     </>
   );
