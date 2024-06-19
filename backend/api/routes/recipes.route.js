@@ -8,10 +8,12 @@ const {
 	deleteRecipe
 } = require('../controllers/recipes.controller');
 
+const { checkAuth } = require("../middlewares/auth.middlewares");
+
 router.get('/', getAllRecipes);
 router.get('/:id', getOneRecipe);
-router.post('/', createRecipe);
-router.put('/:id', updateRecipe);
-router.delete('/:id', deleteRecipe);
+router.post('/', checkAuth, createRecipe);
+router.put('/:id', checkAuth, updateRecipe);
+router.delete('/:id', checkAuth, deleteRecipe);
 
 module.exports = router
