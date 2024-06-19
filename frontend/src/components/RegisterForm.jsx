@@ -39,14 +39,14 @@ function Signup() {
       <h1>Registrarse</h1>
       <form className="form">
         <input
-          placeholder="Introduce tu nombre completo"
+          placeholder="Enter your full name"
           onChange={function (event) {
             setFullname(event.target.value);
           }}
         />
         <input
           className="email"
-          placeholder="Introduce tu email"
+          placeholder="Enter your email"
           type="email"
           onChange={function (event) {
             setEmail(event.target.value);
@@ -54,7 +54,7 @@ function Signup() {
         />
 
         <input
-          placeholder="Introduce tu contraseña"
+          placeholder="Enter your password"
           type="password"
           onChange={function (event) {
             setPassword(event.target.value);
@@ -63,7 +63,7 @@ function Signup() {
 
         {password}
         <input
-          placeholder="Repite tu contraseña"
+          placeholder="Repeat your password"
           type="password"
           onChange={function (event) {
             setDoublePass(event.target.value);
