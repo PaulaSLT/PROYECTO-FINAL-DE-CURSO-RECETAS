@@ -26,10 +26,7 @@ const signUp = async (req, res) => {
 const logIn = async (req, res) => {
   try {
     const user = await User.findOne({where: {email: req.body.email}})
-    const userDetails = {
-      token: '',
-      name: '',
-    }
+    
     if (user) {
       bcrypt.compare(req.body.password, user.password, (err, result) => {
         if (result) {
@@ -37,9 +34,8 @@ const logIn = async (req, res) => {
           const token = jwt.sign({email: user.email}, process.env.JWT_SECRET, {
             expiresIn: '1y',
           })
-          userDetails.token = token
-          userDetails.name = user.name
-          return res.status(200).json({userDetails})
+          
+          return res.status(200).json({message: 'Logged', token})
         }
         return res
           .status(400)
