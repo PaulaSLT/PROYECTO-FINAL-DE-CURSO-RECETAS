@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import './LoginForm.css'
 import { login } from '../../services/auth.service';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState("");
   const [errs, setErrs] = useState(""); 
+
+  const navigate = useNavigate()
   
 
 
@@ -16,7 +19,8 @@ function LoginForm() {
        const response = await login(email, password)
         setErrs('')
         localStorage.setItem('token', response.token )
-
+        navigate('/')
+       
       } else {
         setErrs("All fields should be completed ");
       }
