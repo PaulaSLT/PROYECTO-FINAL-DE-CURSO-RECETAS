@@ -10,3 +10,13 @@ export async function getRecipesByArea (area){
         console.log(error)
     }
 } 
+
+
+export async function getAllRecipesFromDBMeals () {
+  try {
+    const { data } = await apiRecetas.get("/search.php?s=")
+    return data.meals
+  } catch (error) {
+    console.log(error)
+  }
+}
