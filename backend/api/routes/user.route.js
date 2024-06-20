@@ -15,6 +15,6 @@ router.get('/myprofile', checkAuth , getMyProfile)
 router.get("/:id", checkAuth, getOneUser);
 router.post("/", createUser);
 router.put("/:id", checkAuth, updateUser);
-router.delete("/:id", checkAuth, deleteUser);
+router.delete("/:id", deleteUser);
 
 module.exports = router;
