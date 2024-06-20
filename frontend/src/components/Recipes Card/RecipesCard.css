@@ -1,0 +1,64 @@
+/* #container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+    color: black;
+}
+
+
+
+.image-container {
+    height: 50px;
+    width: 50px;
+} */
+
+#container_recipeCard {
+    display: flex;
+    flex-direction: row
+
+
+}
+
+#image-container {
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#recipeName {
+    display: flex;
+    flex-direction: column;
+    align-content: right;
+
+}
+
+#ingredients {
+
+    display: flex;
+    list-style: none;
+}
+
+#ingredients li {
+
+    display: flex;
+    list-style: none;
+}
+#Instructions {
+
+    display: flex;
+    text-align: left;
+    margin-left: 40px;
+}

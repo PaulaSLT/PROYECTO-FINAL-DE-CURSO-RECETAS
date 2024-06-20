@@ -8,7 +8,7 @@ function LoginForm() {
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState("");
   const [errs, setErrs] = useState(""); 
-  const  navigate = useNavigate()
+  const  navigate = useNavigate();
   
 
   async function handleClick(){

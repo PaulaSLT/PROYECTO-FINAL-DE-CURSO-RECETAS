@@ -2,6 +2,7 @@ import React, { useDebugValue, useEffect, useState } from 'react'
 import './Recipes.css'
 import Search from '../../components/SearchRecipe'
 import { getAllRecipesFromDBMeals } from '../../services/theMealDb.service'
+import RecipesCard from '../../components/Recipes Card/RecipesCard'
 
 function Recipes() {
   const [apiMeals, setApiMeals] = useState([])
@@ -41,19 +42,10 @@ function Recipes() {
               );
             })
           : apiMeals.length > 0 &&
-            apiMeals.map(function (recipe, idx) {
-              return (
-                <div key={idx} className="caja">
-                  <h3>{recipe.strMeal}</h3>
-                  <p>{recipe.strCategory}</p>
-                  <img
-                    src={recipe.strMealThumb}
-                    className="imgRecipe"
-                    alt={recipe.strMeal}
-                  />
-                </div>
-              );
-            })}
+                <RecipesCard recipe={apiMeals[0]}/>
+              
+            }
+            
       </div>
     </div>
   );
