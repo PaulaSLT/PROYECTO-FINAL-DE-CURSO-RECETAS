@@ -6,6 +6,7 @@ import SearchRecipe from './components/SearchRecipe'
 import { useNavigate } from 'react-router-dom'
 import Signup from './components/RegisterForm'
 import { BeakerIcon, CheckBadgeIcon } from "@heroicons/react/24/outline";
+import UnregisterForm from './components/UnregisterForm/UnregisterForm'
 
 function App() {
   const navigate = useNavigate()
@@ -18,6 +19,7 @@ function App() {
       <div>
         <BeakerIcon/>
         <CheckBadgeIcon/>
+        <UnregisterForm/>
       </div>
     </>
   );

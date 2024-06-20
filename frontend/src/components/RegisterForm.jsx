@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { signup } from "../services/auth.service";
 import { useNavigate } from "react-router-dom";
+import UnregisterForm from "./UnregisterForm/UnregisterForm";
 
-function Signup() {
+function RegisterForm() {
   const [fullname, setFullname] = useState("");
   const [password, setPassword] = useState("");
   const [doublePass, setDoublePass] = useState("");
@@ -20,6 +21,10 @@ function Signup() {
         ) {
           await signup(email, fullname, password);
           setErrs("");
+          setPassword('')
+          setFullname('')
+          setEmail('')
+          navigate('/')
         } else {
           setErrs(
             "pass with at least 8 char: 1 caracter especial, 1 minuscula, 1 mayus"
@@ -91,8 +96,9 @@ function Signup() {
       >
         VOLVER A HOME
       </button>
+      <UnregisterForm/>
     </>
   );
 }
 
-export default Signup;
+export default RegisterForm;
