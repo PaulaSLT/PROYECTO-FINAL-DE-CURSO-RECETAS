@@ -19,6 +19,7 @@ function LoginForm() {
         setErrs('')
         localStorage.setItem('token', response.token )
         navigate('/')
+       
       } else {
         setErrs("All fields should be completed ");
       }
