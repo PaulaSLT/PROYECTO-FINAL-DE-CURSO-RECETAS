@@ -1,6 +1,6 @@
 import React, { useDebugValue, useEffect, useState } from 'react'
 import './Recipes.css'
-import Search from '../../components/SearchRecipe'
+import Search from '../../components/SearchRecipe/SearchRecipe'
 import { getAllRecipesFromDBMeals } from '../../services/theMealDb.service'
 import RecipesCard from '../../components/Recipes Card/RecipesCard'
 

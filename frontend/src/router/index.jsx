@@ -1,17 +1,12 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
 import Layout from "../layouts/Layout";
-
 import App from "../App";
-import RegisterForm from "../components/RegisterForm";
+import RegisterForm from "../components/RegisterForm/RegisterForm";
 import NewRecipes from "../pages/NewRecipes";
 import LoginForm from "../components/LoginForm/LoginForm";
 import Recipes from "../pages/Recipes/Recipes";
-<<<<<<< HEAD
-import AboutUs from "../components/HeaderComponent/AboutUs/AboutUs";
-
-=======
-import Profile from "../../profile/Profile";
->>>>>>> SeeTheProfile
+import AboutUs from "../components/AboutUs/AboutUs";
+import Profile from "../pages/profile/Profile";
 
 function authLoader() {
   if (!localStorage.getItem("token")) return redirect("/");

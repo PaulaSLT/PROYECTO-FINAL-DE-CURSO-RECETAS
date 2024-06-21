@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { signup } from "../services/auth.service";
+import { signup } from "../../services/auth.service";
 import { useNavigate } from "react-router-dom";
-import UnregisterForm from "./UnregisterForm/UnregisterForm";
+import UnregisterForm from "../UnregisterForm/UnregisterForm";
 
 function RegisterForm() {
   const [fullname, setFullname] = useState("");

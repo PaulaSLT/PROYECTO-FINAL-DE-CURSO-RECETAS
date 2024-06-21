@@ -2,14 +2,14 @@ import React, { useContext, useState } from "react";
 import "./LoginForm.css";
 import { login } from "../../services/auth.service";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../context/userContext";
+import {  UserContext } from "../../context/ContextWrapper";
 
 function LoginForm() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [errs, setErrs] = useState("");
   const navigate = useNavigate();
-  const {user, setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   async function handleClick(event) {
     event.preventDefault();
