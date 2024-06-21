@@ -1,5 +1,5 @@
 
-import { unSubscribe } from '../../services/user.service';
+import { unSubscribe } from '../../services/user.service'
 import { useNavigate } from 'react-router-dom';
 
 
