@@ -1,0 +1,12 @@
+body{
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+div{
+    margin: 50px;
+    text-align: justify;
+    
+}
