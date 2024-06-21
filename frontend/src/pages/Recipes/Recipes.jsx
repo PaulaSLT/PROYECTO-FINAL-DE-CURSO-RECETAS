@@ -29,17 +29,7 @@ function Recipes() {
       <div id="container">
         {filteredMeals.length > 0
           ? filteredMeals.map(function (recipe, idx) {
-              return (
-                <div key={idx} className="caja">
-                  <h3>{recipe.strMeal}</h3>
-                  <p>{recipe.strCategory}</p>
-                  <img
-                    src={recipe.strMealThumb}
-                    className="imgRecipe"
-                    alt={recipe.strMeal}
-                  />
-                </div>
-              );
+              return <RecipesCard key={idx} recipe={recipe} />;
             })
 
           : apiMeals.length > 0 &&

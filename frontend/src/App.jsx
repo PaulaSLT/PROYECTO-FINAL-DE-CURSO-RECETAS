@@ -9,7 +9,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <button onClick={() => navigate("/register")}>Register</button>
       <LoginForm />
       <div id="btnContainer">

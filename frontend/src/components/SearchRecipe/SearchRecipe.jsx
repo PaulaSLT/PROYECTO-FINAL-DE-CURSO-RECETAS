@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './SearchRecipe.css'
 import { getRecipesByArea } from '../../services/theMealDb.service'
 
+
 function Search({handleInfo}) {
   const [inputValue, setInputValue] = useState('')
   async function handleClick() {
