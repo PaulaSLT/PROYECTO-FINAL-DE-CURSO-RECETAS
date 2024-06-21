@@ -7,9 +7,6 @@ function Search({handleInfo}) {
   const [inputValue, setInputValue] = useState('')
   async function handleClick() {
       
-      console.log('first')
-
-
       const response = await getRecipesByArea(inputValue)
       if (!response) return handleInfo([])
       handleInfo(response)
@@ -30,7 +27,11 @@ function Search({handleInfo}) {
      Search
     </button>
     </div>
+
   )
+  
+
+  
 }
 
 export default Search

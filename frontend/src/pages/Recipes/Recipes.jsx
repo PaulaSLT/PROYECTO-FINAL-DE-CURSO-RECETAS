@@ -41,11 +41,16 @@ function Recipes() {
                 </div>
               );
             })
+
           : apiMeals.length > 0 &&
-                <RecipesCard recipe={apiMeals[0]}/>
-              
-            }
+                apiMeals.map(function (recipe, idx) {
+              return (
+                <RecipesCard key={idx} recipe={recipe} />
+              )
             
+              
+            })
+          }  
       </div>
     </div>
   );
