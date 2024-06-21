@@ -1,9 +1,14 @@
 #header{
-    background-color: aqua;
+    background-color: #66d2bb;
     color: black;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     height: 52px;   
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 
 }
 

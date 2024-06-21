@@ -9,6 +9,7 @@ const Profile = () => {
   }
 
   return (
+    <div id="align">
     <div id="iconos">
         <div className="iconsDiv">
           <h3>Search my recipes</h3>
@@ -22,6 +23,8 @@ const Profile = () => {
           <h3>My favourites</h3>
           <HeartIcon />
         </div>
+    </div>
+
     </div>
   );
 
