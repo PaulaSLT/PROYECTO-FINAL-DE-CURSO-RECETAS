@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import './SearchRecipe.css'
 import { getRecipesByArea } from '../services/theMealDb.service'
 
-function Search() {
+function Search({handleInfo}) {
   const [inputValue, setInputValue] = useState('')
   async function handleClick() {
       
@@ -11,7 +11,10 @@ function Search() {
 
 
       const response = await getRecipesByArea(inputValue)
-      console.log(response)
+      if (!response) return handleInfo([])
+      handleInfo(response)
+
+      setInputValue('')
   }
 
  

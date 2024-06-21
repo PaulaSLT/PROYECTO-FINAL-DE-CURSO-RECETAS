@@ -5,6 +5,7 @@ import App from "../App";
 import RegisterForm from "../components/RegisterForm";
 import NewRecipes from "../pages/NewRecipes";
 import LoginForm from "../components/LoginForm/LoginForm";
+import Recipes from "../pages/Recipes/Recipes";
 
 function authLoader() {
   if (!localStorage.getItem("token")) return redirect("/");
@@ -22,6 +23,11 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <RegisterForm />,
+        //loader: () => authLoader()
+      },
+      {
+        path: "/recipes",
+        element: <Recipes />,
         //loader: () => authLoader()
       },
       {
