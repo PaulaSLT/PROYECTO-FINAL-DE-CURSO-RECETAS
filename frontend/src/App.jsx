@@ -1,18 +1,22 @@
 
 import './App.css'
 import LoginForm from './components/LoginForm/LoginForm'
-import RecipesCard from './components/RecipesCard'
 import SearchRecipe from './components/SearchRecipe'
 import { useNavigate } from 'react-router-dom'
-import Signup from './components/RegisterForm'
 import { BeakerIcon, CheckBadgeIcon } from "@heroicons/react/24/outline";
 import UnregisterForm from './components/UnregisterForm/UnregisterForm'
 
+import { UserContext } from './context/userContext';
+import { useEffect, useState } from 'react';
+
 function App() {
-  const navigate = useNavigate()
+const [user, setUser] = useState('')
+const navigate = useNavigate()
 
   return (
-    <>
+    
+      <UserContext.Provider value= {{user, setUser}}>
+
       <button onClick={() => navigate("/register")}>Ir a Recipes</button>
       <LoginForm />
       <SearchRecipe />
@@ -21,8 +25,10 @@ function App() {
         <CheckBadgeIcon/>
         <UnregisterForm/>
       </div>
-    </>
+      </UserContext.Provider>
+    
   );
 }
 
 export default App
+
