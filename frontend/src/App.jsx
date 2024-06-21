@@ -1,7 +1,6 @@
 
 import './App.css'
 import LoginForm from './components/LoginForm/LoginForm'
-import RecipesCard from './components/Recipes Card/RecipesCard'
 import SearchRecipe from './components/SearchRecipe'
 import { useNavigate } from 'react-router-dom'
 import { BeakerIcon, CheckBadgeIcon } from "@heroicons/react/24/outline";

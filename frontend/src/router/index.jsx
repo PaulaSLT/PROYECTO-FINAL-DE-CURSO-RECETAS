@@ -6,6 +6,7 @@ import RegisterForm from "../components/RegisterForm";
 import NewRecipes from "../pages/NewRecipes";
 import LoginForm from "../components/LoginForm/LoginForm";
 import Recipes from "../pages/Recipes/Recipes";
+import Profile from "../../profile/Profile";
 
 function authLoader() {
   if (!localStorage.getItem("token")) return redirect("/");
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path: "/newrecipe",
         element: <NewRecipes />,
+      },
+      {
+        path: "/myprofile",
+        element: <Profile />,
       },
     ],
   },
