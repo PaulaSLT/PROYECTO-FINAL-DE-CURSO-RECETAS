@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './RecipesCard.css'
 
 function RecipesCard({ recipe }) {
