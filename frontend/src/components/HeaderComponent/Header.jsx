@@ -9,14 +9,16 @@ function Header() {
     
     return (
       <div id="header">
-        <div className="boton">
-          <button onClick={() => navigate("/")}>Home</button>
+        <div className="boton" onClick={() => navigate("/")}>
+          <p className='cursor'>Home</p>
         </div>
-        <div className="boton">
-          <button onClick={() => navigate("/myprofile")}>Profile</button>
+
+        <div className="boton" onClick={() => navigate("/myprofile")}>
+          <p className='cursor'>Profile</p>
         </div>
-        <div className="boton">
-          <button onClick={() => navigate("/aboutus")}>About</button>
+
+        <div className="boton" onClick={() => navigate("/AboutUs")}>
+          <p className='cursor'>About us</p>
         </div>
       </div>
     );

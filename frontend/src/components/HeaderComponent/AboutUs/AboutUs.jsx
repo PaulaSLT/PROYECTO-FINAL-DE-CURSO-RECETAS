@@ -1,7 +1,8 @@
 import React from 'react'
+import "./AboutUs.css"
 
-function HandleAbout() {
-    
+function AboutUs() {
+
   return (
     <div>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro optio neque nisi in molestiae excepturi voluptas impedit, unde repellendus dicta vero. Consequuntur sint voluptatum ratione tempore doloribus quia illo!
@@ -11,4 +12,4 @@ function HandleAbout() {
   )
 }
 
-export default HandleAbout
+export default AboutUs
