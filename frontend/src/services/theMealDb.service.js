@@ -20,3 +20,12 @@ export async function getAllRecipesFromDBMeals () {
     console.log(error)
   }
 }
+
+export async function getRandomRecipe() {
+  try {
+    const { data } = await apiRecetas.get("/random.php");
+    return data.meals;
+  } catch (error) {
+    console.log(error);
+  }
+}
