@@ -39,7 +39,7 @@ const logIn = async (req, res) => {
             }
           );
          
-          return res.status(200).json({ message: 'Logged in', token });
+          return res.status(200).json({ message: 'Logged in', token ,user });
         }
         return res
           .status(400)
