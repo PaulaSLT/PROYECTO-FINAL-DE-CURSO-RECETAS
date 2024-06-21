@@ -1,0 +1,70 @@
+
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+#iconos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 120px;
+}
+.profile {
+    
+    align-items: center;
+    justify-content: center;
+     text-align: center;
+     padding: 50px
+}
+
+.profile-recipes {
+    list-style: none;
+    padding: 0;
+}
+
+
+.recipes{
+    
+    align-items: center;
+    justify-content: center;    
+    text-align: center;
+    padding: 50px;
+}
+
+.iconsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 10%;
+    cursor: pointer;
+}
+
+.iconsDiv:hover{
+    color: aqua;
+}
+
+
+
+
+
