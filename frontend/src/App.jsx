@@ -17,9 +17,8 @@ function App() {
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <Header />
-      <button onClick={() => navigate("/register")}>Ir a Recipes</button>
+      <button onClick={() => navigate("/register")}>Register</button>
       <LoginForm />
-      <SearchRecipe />
       <div id="btnContainer">
         <button onClick={() => navigate("/myprofile")}>
           Share your Recipe
@@ -27,8 +26,6 @@ function App() {
         <button onClick={() => navigate("/recipes")}>Explore Recipes</button>
       </div>
       <div>
-        <BeakerIcon />
-        <CheckBadgeIcon />
       </div>
     </UserContext.Provider>
   );
