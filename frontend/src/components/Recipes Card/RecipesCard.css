@@ -25,7 +25,7 @@
     width: 50px;
 } */
 
-#container_recipeCard {
+/* #container_recipeCard {
     display: flex;
     flex-direction: row
 
@@ -34,8 +34,9 @@
 
 #image-container {
      display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
+
 }
 
 #recipeName {
@@ -61,4 +62,13 @@
     display: flex;
     text-align: left;
     margin-left: 40px;
+} */
+/* RecipesCard.css */
+#ingredients ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#ingredients h2, #Instructions {
+  margin-top: 16px;
 }
