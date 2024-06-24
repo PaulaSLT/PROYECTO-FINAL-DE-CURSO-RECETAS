@@ -41,7 +41,7 @@ function RegisterForm() {
   }
 
   return (
-    <> 
+    <div id="registercontainer"> 
     
       <h1>Registrarse</h1>
       <form className="form">
@@ -94,6 +94,7 @@ function RegisterForm() {
           Click here!
         </a>
       </form>
+      <p>You have an account<span className="linkbutton" onClick={()=> navigate("/login")}>Log in!</span></p>
 
       <button
         onClick={function () {
@@ -103,7 +104,7 @@ function RegisterForm() {
         Back to Home
       </button>
       <UnregisterForm/>
-    </>
+    </div>
   );
 }
 

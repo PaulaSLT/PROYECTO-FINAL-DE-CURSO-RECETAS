@@ -19,11 +19,8 @@ function Usbatlogout() {
   }, [token]);
 
   return (
-    <div>
-      {localStorage.getItem("token") && (
-        <button onClick={() => logout()}>Logout</button>
-      )}
-    </div>
+     
+        <p onClick={() => logout()}>Logout</p>
   );
 }
 

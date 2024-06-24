@@ -1,4 +1,8 @@
-
+#registercontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .form{
     width: 200px;
@@ -9,7 +13,7 @@
 button{
     width: 20vw;
     height: 50px;
-    margin-top: 400px;
+    margin-top: 100px;
     margin-bottom: 100px;   
     border-radius: 10px;
     background-color: rgb(248, 184, 177);
@@ -18,10 +22,12 @@ button{
     font-size: 20px;
     box-shadow: 5px 5px 5px grey;
     font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
     
 }
 button:hover{
-    color: rgb(223, 14, 14);
+    color: white;
+    font-weight: 600
 }
 input{
     border-style: none;

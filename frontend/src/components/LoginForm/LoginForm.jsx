@@ -32,7 +32,7 @@ function LoginForm() {
   }
 
   return (
-    <>
+    <div id='logincontainer'>
       <form className="form">
         <input
           placeholder="Enter your email"
@@ -50,7 +50,8 @@ function LoginForm() {
 
         <button onClick={handleClick}>Submit</button>
       </form>
-    </>
+      <p>Have not an account! <span className="linkbutton" onClick={()=> navigate("/register")}>Register now!</span></p>
+    </div>
   );
 }
 
