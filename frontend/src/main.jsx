@@ -6,10 +6,11 @@ import { router } from "./router/index.jsx";
 
 import ContextWrapper from "./context/ContextWrapper.jsx";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ContextWrapper>
-        <RouterProvider router={router} />
+        <RouterProvider router={router} />        
     </ContextWrapper>
   </React.StrictMode>
 );
