@@ -12,6 +12,10 @@ function authLoader() {
   if (!localStorage.getItem("token")) return redirect("/");
 }
 
+function logged() {
+  if (!localStorage.getItem("token")) return redirect("/login");
+}
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -47,6 +51,7 @@ export const router = createBrowserRouter([
       {
         path: "/myprofile",
         element: <Profile />,
+        loader: ()=>logged()
       },
     ],
   },

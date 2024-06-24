@@ -94,8 +94,7 @@ function RegisterForm() {
           Click here!
         </a>
       </form>
-      <p>You have an account<span className="linkbutton" onClick={()=> navigate("/login")}>Log in!</span></p>
-
+     
       <button
         onClick={function () {
           navigate("/");
@@ -103,6 +102,8 @@ function RegisterForm() {
       >
         Back to Home
       </button>
+     
+     <p>You have an account<span className="linkbutton" onClick={()=> navigate("/login")}>Log in!</span></p>
       <UnregisterForm/>
     </div>
   );

@@ -19,10 +19,7 @@ const User = sequelize.define('user', {
   password: {
     type: DataTypes.STRING,
     allowNull: false,
-    validate: {
-      is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
-      //validation: pass with at least 8 char: 1 caracter especial, 1 minuscula, 1 mayus
-    },
+    
     
   }
  

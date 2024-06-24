@@ -33,6 +33,7 @@ function LoginForm() {
 
   return (
     <div id='logincontainer'>
+      <h1>Sign in</h1>
       <form className="form">
         <input
           placeholder="Enter your email"
@@ -44,13 +45,15 @@ function LoginForm() {
           placeholder="Enter your password"
           type="password"
           onChange={(event) => setPassword(event.target.value)}
-        />
-
+        /> 
         {errs && <span>{errs}</span>}
+        <p>Have not an account? <span className="linkbutton" onClick={()=> navigate("/register")}>Register now!</span></p>
+        </form>
+      
+
 
         <button onClick={handleClick}>Submit</button>
-      </form>
-      <p>Have not an account! <span className="linkbutton" onClick={()=> navigate("/register")}>Register now!</span></p>
+     
     </div>
   );
 }
