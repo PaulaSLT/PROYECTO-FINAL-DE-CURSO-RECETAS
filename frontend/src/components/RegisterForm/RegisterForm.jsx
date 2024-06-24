@@ -40,11 +40,13 @@ function RegisterForm() {
   }
 
   return (
-    <>
+    <> 
+    
       <h1>Registrarse</h1>
       <form className="form">
         <input
           placeholder="Enter your full name"
+          autoComplete="on"
           onChange={function (event) {
             setFullname(event.target.value);
           }}
@@ -52,6 +54,8 @@ function RegisterForm() {
         <input
           className="email"
           placeholder="Enter your email"
+          autoComplete="on"
+          required
           type="email"
           onChange={function (event) {
             setEmail(event.target.value);
@@ -61,6 +65,7 @@ function RegisterForm() {
         <input
           placeholder="Enter your password"
           type="password"
+          required
           onChange={function (event) {
             setPassword(event.target.value);
           }}
@@ -77,15 +82,15 @@ function RegisterForm() {
 
         {errs && <p className="error">{errs}</p>}
 
-        <button onClick={handleClick}>Enviar</button>
+        <button onClick={handleClick}>Submit</button>
 
-        <p>Tienes cuenta </p>
+        <p>You have an account </p>
         <a
           onClick={function () {
             navigate("/login");
           }}
         >
-          Haz click aquí
+          Click here!
         </a>
       </form>
 
@@ -94,7 +99,7 @@ function RegisterForm() {
           navigate("/");
         }}
       >
-        VOLVER A HOME
+        Back to Home
       </button>
       <UnregisterForm/>
     </>
