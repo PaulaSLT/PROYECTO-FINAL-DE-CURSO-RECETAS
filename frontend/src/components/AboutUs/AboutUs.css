@@ -1,0 +1,10 @@
+.aboutus {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    margin: 200px;
+    margin-left: 600px; 
+    margin-right: 600px;
+    color: white;
+}

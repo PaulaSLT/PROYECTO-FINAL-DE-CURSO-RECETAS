@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import "./RecipesCard.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -71,9 +70,7 @@ function RecipesCard({ recipe }) {
 
   return (
     <>
-      <Card
-        sx={{ width:300, minHeight: 230, color: "black",  }}
-      >
+      <Card sx={{ width: 300, minHeight: 230, color: "black" }}>
         <CardActionArea>
           <CardMedia
             component="img"

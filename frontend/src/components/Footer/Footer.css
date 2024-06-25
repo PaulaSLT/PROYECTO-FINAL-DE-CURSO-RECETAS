@@ -1,0 +1,41 @@
+.footer-spot {
+    display: flex;
+    bottom: 0;
+<<<<<<< HEAD
+    width: 100vw;
+    color: black;
+=======
+    color: white;
+>>>>>>> 5d14806c7562f45e0feca4f76c4312829bce3729
+}
+
+.area{
+    list-style: none;
+    
+    
+}
+li{
+    list-style: none;
+}
+#Areas{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-content: center;
+    text-align: left;
+    width: 700px;
+    
+}
+#legal{
+   display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-content: center;
+    text-align: left;
+    align-items:end;
+    align-self: flex-end;
+}
+
+h3{
+    text-align: center;
+}
