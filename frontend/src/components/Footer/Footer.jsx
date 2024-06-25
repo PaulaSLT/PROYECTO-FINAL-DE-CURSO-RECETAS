@@ -28,7 +28,6 @@ function Footer() {
                         </ul>
                 </li>
             </ul>
-          </li>
 
           <li className="meal">
             <h3>Types of meals</h3>
@@ -53,7 +52,6 @@ function Footer() {
             <li>Privacy</li>
             <li>Terms & Conditions</li>
           </ul>
-        </ul>
       </div>
     </>
   );
