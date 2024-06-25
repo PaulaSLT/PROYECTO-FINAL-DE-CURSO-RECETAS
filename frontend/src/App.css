@@ -1,6 +1,5 @@
 
 #root{
-    background-image: url("../src/Images/BACKGROUND.png");
     background-size: cover;
     min-height: 100vh;
 }
