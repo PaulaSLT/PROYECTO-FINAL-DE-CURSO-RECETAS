@@ -38,21 +38,21 @@ function LoginForm() {
         <input
           placeholder="Enter your email"
           type="email"
-          onChange={(event) => setEmail(event.target.value)}
-        />
+          onChange={(event) => setEmail(event.target.value)}/>
 
         <input
           placeholder="Enter your password"
           type="password"
           onChange={(event) => setPassword(event.target.value)}
         /> 
-        {errs && <span>{errs}</span>}
+        {errs && <span>{errs}</span>} 
+        <button className="enviar" onClick={handleClick}>Submit</button>
         <p>Have not an account? <span className="linkbutton" onClick={()=> navigate("/register")}>Register now!</span></p>
         </form>
       
 
 
-        <button onClick={handleClick}>Submit</button>
+       
      
     </div>
   );

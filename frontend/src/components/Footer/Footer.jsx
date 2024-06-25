@@ -16,6 +16,18 @@ function Footer() {
             </ul>
           </li>
 
+
+                <li>
+                    <p>Follow us</p>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>X</li>
+              
+                        </ul>
+                </li>
+            </ul>
+
           <li className="meal">
             <h3>Types of meals</h3>
             <ul>
@@ -39,7 +51,6 @@ function Footer() {
             <li>Privacy</li>
             <li>Terms & Conditions</li>
           </ul>
-        </ul>
       </div>
     </>
   );
