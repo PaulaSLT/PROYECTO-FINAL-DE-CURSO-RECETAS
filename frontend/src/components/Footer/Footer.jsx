@@ -9,9 +9,10 @@ function Footer() {
           <li className="area">
             <h3>Areas</h3>
             <ul>
-              <li>Asian</li>
-              <li>Mediterránea</li>
-              <li>Arabic</li>
+              <li>British</li>
+              <li>Canadian</li>
+              <li>Italian</li>
+              <li>Etc.</li>
             </ul>
           </li>
 
