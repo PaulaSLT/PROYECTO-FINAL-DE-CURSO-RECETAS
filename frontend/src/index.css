@@ -2,5 +2,28 @@ body{
   margin: 0;
   width: 100vw;
   
-  
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.form input {
+    background-color: rgb(253, 231, 235);
+    color: black;
+    padding: 10px;
+    font-style: italic;
+    border-radius: 10px;
+    
+}
+
+input {
+  background-color: rgb(253, 231, 235);
+  color: black;
+  padding: 10px;
+  font-style: italic;
+  border-radius: 10px;
 }

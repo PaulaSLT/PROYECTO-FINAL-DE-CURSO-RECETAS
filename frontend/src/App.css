@@ -1,6 +1,6 @@
 
 #root{
-    background-image: url("../src/Images/FrontImage.webp");
+    background-image: url("../src/Images/BackBlanco.png");
     background-size: cover;
     min-height: 100vh;
 }
@@ -14,6 +14,7 @@ div{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 }
 
 
@@ -32,5 +33,5 @@ div{
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
     width: 500px;
-    font-weight:bold
+    font-weight:bold;
 }

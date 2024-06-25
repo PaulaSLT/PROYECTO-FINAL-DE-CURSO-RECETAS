@@ -8,13 +8,20 @@ function App() {
   const navigate = useNavigate();
 
   return (
-    <div id='homecontainer'>
+    <div id="homecontainer">
       <h1>Jilorio World Tour</h1>
-        <div className='parrafo'>
-          <p>En esta página web especializada en comidas del mundo, podrás descubrir una amplia variedad de platos tradicionales de diferentes países y culturas. Desde sabores exóticos de Asia hasta delicias latinoamericanas, te llevará en un viaje culinario alrededor del globo. Con recetas detalladas, ingredientes auténticos y consejos de expertos, ¡prepárate para sorprender a tu paladar con una experiencia gastronómica única!</p>
+      <div className="parrafo">
+        <p>
+          On this website specialized in world foods, you can discover a wide
+          variety of traditional dishes from different countries and cultures.
+          From exotic Asian flavors to Latin American delicacies, it will take
+          you on a culinary journey around the globe. With detailed recipes,
+          authentic ingredients, and expert advice, get ready to wow your palate
+          with a unique dining experience!
+        </p>
       </div>
       <div id="btnContainer">
-        <button  onClick={() => navigate("/myprofile")}>
+        <button onClick={() => navigate("/myprofile")}>
           Share your Recipe
         </button>
         <button onClick={() => navigate("/recipes")}>Explore Recipes</button>
