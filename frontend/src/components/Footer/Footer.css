@@ -1,7 +1,7 @@
 .footer-spot {
     display: flex;
-    position: absolute;
     bottom: 0;
+    color: white;
 }
 
 .area{
@@ -21,12 +21,15 @@ li{
     
 }
 #legal{
-    display: flex;
+   display: flex;
     flex-direction: row;
     gap: 50px;
-    position: absolute;
-    bottom: 0;
+    align-content: center;
+    text-align: left;
+    align-items:end;
+    align-self: flex-end;
 }
+
 h3{
     text-align: center;
 }

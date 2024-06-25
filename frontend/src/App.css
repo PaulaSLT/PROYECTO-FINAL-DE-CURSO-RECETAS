@@ -3,9 +3,6 @@
     background-size: cover;
     min-height: 100vh;
 }
-div{
-    color: rgba(255, 251, 251, 0.874);
-}
 
 #homecontainer{
     display: flex;
