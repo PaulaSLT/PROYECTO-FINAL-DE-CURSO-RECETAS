@@ -9,7 +9,7 @@ import { HeartIcon as HeartOutlineIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
 import { getAllInformationFromMeal } from "../../services/theMealDb.service";
 
-function RecipesCard({ recipe }) {
+function RecipesCard({ recipe, img = null }) {
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -75,7 +75,7 @@ function RecipesCard({ recipe }) {
           <CardMedia
             component="img"
             height="140"
-            image={recipe.strMealThumb}
+            image={recipe.strMealThumb ? recipe.strMealThumb : img}
             alt={recipe.strMeal}
             onClick={handleOpen}
           />
