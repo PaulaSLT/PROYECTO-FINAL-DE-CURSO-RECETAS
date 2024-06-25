@@ -2,7 +2,7 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import App from "../App";
 import RegisterForm from "../components/RegisterForm/RegisterForm";
-import NewRecipes from "../pages/NewRecipes";
+import NewRecipes from "../pages/NewRecipes/NewRecipes";
 import LoginForm from "../components/LoginForm/LoginForm";
 import Recipes from "../pages/Recipes/Recipes";
 import AboutUs from "../components/AboutUs/AboutUs";
