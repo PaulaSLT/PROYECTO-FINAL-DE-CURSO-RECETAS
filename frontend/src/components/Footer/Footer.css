@@ -1,0 +1,32 @@
+.footer-spot {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.area{
+    list-style: none;
+    
+    
+}
+li{
+    list-style: none;
+}
+#Areas{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-content: center;
+    text-align: left;
+    
+}
+#legal{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    position: absolute;
+    bottom: 0;
+}
+h3{
+    text-align: center;
+}

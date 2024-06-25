@@ -26,7 +26,6 @@ function App() {
         </button>
         <button onClick={() => navigate("/recipes")}>Explore Recipes</button>
       </div>
-      <div></div>
     </div>
   );
 }
