@@ -7,18 +7,19 @@ function Footer() {
         <div className='footer-spot'>
             <ul id='Areas'>
                 <li className='area'>
-                    <h3>Areas</h3>
+                    <p>Areas</p>
                         <ul>
-                            <li>Asian</li>
-                            <li>Mediterránea</li>
-                            <li>Arabic</li>
+                            <li>British</li>
+                            <li>Canadian</li>
+                            <li>Italian</li>
+                            <li>Etc.</li>
               
                         </ul>
                 </li>
 
 
                 <li>
-                    <h3>Follow us</h3>
+                    <p>Follow us</p>
                         <ul>
                             <li>Facebook</li>
                             <li>Instagram</li>

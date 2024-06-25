@@ -41,8 +41,7 @@ function RegisterForm() {
   }
 
   return (
-    <div id="registercontainer"> 
-    
+    <div id="registercontainer">
       <h1>Registrarse</h1>
       <form className="form">
         <input
@@ -85,26 +84,16 @@ function RegisterForm() {
 
         <button onClick={handleClick}>Submit</button>
 
-        <p>You have an account </p>
-        <a
-          onClick={function () {
-            navigate("/login");
-          }}
-        >
-          Click here!
-        </a>
+        
+        <p>
+          You have an account
+          <span className="linkbutton" onClick={() => navigate("/login")}>
+            Log in!
+          </span>
+        </p>
       </form>
-     
-      <button
-        onClick={function () {
-          navigate("/");
-        }}
-      >
-        Back to Home
-      </button>
-     
-     <p>You have an account<span className="linkbutton" onClick={()=> navigate("/login")}>Log in!</span></p>
-      <UnregisterForm/>
+
+      <UnregisterForm />
     </div>
   );
 }
