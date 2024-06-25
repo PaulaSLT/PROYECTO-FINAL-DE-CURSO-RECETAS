@@ -16,15 +16,6 @@ function Footer() {
                         </ul>
                 </li>
 
-                <li className='meal'>
-                    <h3>Types of meals</h3>
-                        <ul>
-                            <li>Breakfast</li>
-                            <li>Snacks</li>
-                            <li>Meal</li>
-                            <li>Dinner</li>
-                        </ul>
-                </li>
 
                 <li>
                     <h3>Follow us</h3>

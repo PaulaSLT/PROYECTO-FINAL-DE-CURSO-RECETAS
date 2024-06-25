@@ -2,6 +2,7 @@
     display: flex;
     position: absolute;
     bottom: 0;
+    width: 100vw;
 }
 
 .area{
@@ -15,17 +16,19 @@ li{
 #Areas{
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 70px;
     align-content: center;
     text-align: left;
+    width: 700px;
     
 }
 #legal{
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 70px;
     position: absolute;
     bottom: 0;
+    width: 700px;
 }
 h3{
     text-align: center;
