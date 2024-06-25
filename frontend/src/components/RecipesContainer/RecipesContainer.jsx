@@ -8,17 +8,15 @@ import Search from "../SearchRecipe/SearchRecipe";
 
 function RecipesContainer() {
   const [recipes, setRecipes] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(""); // Estado para almacenar el término de búsqueda
-  const [loading, setLoading] = useState(true); // Estado para controlar el estado de carga
-  const numberOfRecipes = 5; // Número de recetas aleatorias a obtener inicialmente
+  const [searchTerm, setSearchTerm] = useState(""); 
+  const [loading, setLoading] = useState(true); 
+  const numberOfRecipes = 5; 
 
   useEffect(() => {
     async function fetchData() {
-      setLoading(true); // Establecer el estado de carga a true al iniciar la búsqueda
+      setLoading(true); 
 
       let fetchedRecipes = [];
-
-      // Obtener recetas aleatorias si no hay un término de búsqueda
       if (!searchTerm) {
         for (let i = 0; i < numberOfRecipes; i++) {
           const data = await getRandomRecipe();
@@ -28,7 +26,6 @@ function RecipesContainer() {
           }
         }
       } else {
-        // Obtener recetas por área si hay un término de búsqueda
         const data = await getRecipesByArea(searchTerm);
         if (data) {
           fetchedRecipes = data;
@@ -37,27 +34,26 @@ function RecipesContainer() {
 
 
       setRecipes(fetchedRecipes);
-      setLoading(false); // Establecer el estado de carga a false después de obtener los datos
-    }
+      setLoading(false); 
 
     fetchData();
-  }, [searchTerm]); // Ejecutar efecto cada vez que cambia el término de búsqueda
+  }, [searchTerm]); 
 
   const handleSearch = (area) => {
-    setSearchTerm(area); // Actualizar el término de búsqueda al hacer la búsqueda
+    setSearchTerm(area); 
   };
 
   return (
     <div>
       <Search handleSearch={handleSearch} />{" "}
-      {/* Componente Search para realizar la búsqueda */}
+      {/}
       {loading
-        ? "Loading..." // Mostrar mensaje de carga mientras se obtienen los datos
+        ? "Loading..." 
         : recipes.length > 0
         ? recipes.map((recipe, index) => (
             <RecipesCard key={recipe.idMeal} recipe={recipe} />
           ))
-        : "No recipes found." // Mostrar mensaje si no se encontraron recetas
+        : "No recipes found." 
       }
     </div>
   );
