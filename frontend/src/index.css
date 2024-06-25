@@ -1,29 +1,11 @@
-body{ 
+body {
   margin: 0;
-  width: 100vw;
-  
+  background-image: url("../src/Images/FrontImage.webp");
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
 }
 
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;  
-}
-
-.form input {
-    background-color: rgb(253, 231, 235);
-    color: black;
-    padding: 10px;
-    font-style: italic;
-    border-radius: 10px;
-    
-}
-
-input {
-  background-color: rgb(253, 231, 235);
-  color: black;
-  padding: 10px;
-  font-style: italic;
-  border-radius: 10px;
+#root {
+  height: 90vh;
 }

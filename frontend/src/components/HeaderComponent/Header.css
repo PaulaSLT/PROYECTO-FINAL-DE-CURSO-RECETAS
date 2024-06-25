@@ -12,31 +12,31 @@
 }
 
 .headerContent {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
-
 
 .boton {
     margin: 10px;
     padding: 5px;
     cursor: pointer;
+    color: rgba(71, 3, 3, 0.8)
     
 }
 
 .boton:hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .logout {
-    color: rgba(255, 0, 0, 0.80)
+  color: rgba(255, 0, 0, 0.8);
 }
 
 .logout:hover {
-    color: rgba(255, 0, 0, 0.945);
-    font-weight: 600;
+  color: rgba(255, 0, 0, 0.945);
+  font-weight: 600;
 }
 
-.cursor:hover{
-    color: rgb(156, 152, 152)
+.cursor:hover {
+  color: rgb(156, 152, 152);
 }
