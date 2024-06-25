@@ -7,13 +7,19 @@ import LoginForm from "../components/LoginForm/LoginForm";
 import Recipes from "../pages/Recipes/Recipes";
 import AboutUs from "../components/AboutUs/AboutUs";
 import Profile from "../pages/profile/Profile";
+import MyFavorite from "../pages/myFavourites/myFavourites";
+import MyRecipes from "../pages/MyRecipes/MyRecipes";
 
 function authLoader() {
   if (!localStorage.getItem("token")) return redirect("/");
 }
 
 function logged() {
-  if (!localStorage.getItem("token")) return redirect("/login");
+  if (!localStorage.getItem("token")){
+     return redirect("/login")
+  }else {
+    return null
+  }
 }
 
 export const router = createBrowserRouter([
@@ -46,12 +52,22 @@ export const router = createBrowserRouter([
       },
       {
         path: "/aboutus",
-        element: <AboutUs/>
+        element: <AboutUs />,
       },
       {
         path: "/myprofile",
         element: <Profile />,
-        loader: ()=>logged()
+        loader: () => logged(),
+      },
+      {
+        path: "/myfavourites",
+        element: <MyFavorite />,
+        loader: () => logged(),
+      },
+      {
+        path: "/myrecipes",
+        element: <MyRecipes />,
+        loader: () => logged(),
       },
     ],
   },

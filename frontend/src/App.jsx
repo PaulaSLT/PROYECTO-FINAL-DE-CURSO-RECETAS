@@ -21,7 +21,7 @@ function App() {
         </p>
       </div>
       <div id="btnContainer">
-        <button onClick={() => navigate("/myprofile")}>
+        <button onClick={() => navigate("/newrecipe")}>
           Share your Recipe
         </button>
         <button onClick={() => navigate("/recipes")}>Explore Recipes</button>
