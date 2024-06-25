@@ -12,19 +12,33 @@ function  initRelationships() {
     Recipe.belongsTo(User);
 
     User.belongsToMany(Recipe, {
-      through: "Favourites",
+      through: {
+        model: 'Favourites',
+        unique: false,
+        timestamps: false,
+      },
+      as: 'favourites',     
       onDelete: "CASCADE",
       onUpdate: "CASCADE",
+      foreignKey: 'userId',
     });
     Recipe.belongsToMany(User, {
-      through: "Favourites",
+       through: {
+        model: 'Favourites',
+        unique: false,
+        timestamps: false,
+      },
+       as: 'favouritedBy',
       onDelete: "CASCADE",
       onUpdate: "CASCADE",
+      foreignKey: 'recipeId',
     });
+
   } catch (error) {
     throw new Error("Error adding relations to models", error);
   }
 }
+
 
 module.exports = {
   initRelationships,
