@@ -18,15 +18,16 @@ function Search({handleInfo}) {
  
   return (
     <div id='input-container'>
-    <input
-    placeholder='Search recipe'
-    onChange={function(e){setInputValue(e.target.value)}}
-    value={inputValue}
-    />
+      <input
+      className='inputSearch'
+      placeholder='Search a recipe'
+      onChange={function(e){setInputValue(e.target.value)}}
+      value={inputValue}
+      />
 
-    <button onClick={ handleClick }>
-     Search
-    </button>
+      <button onClick={ handleClick } id='buttonSearch'>
+      Explore new cuisines
+      </button>
     </div>
 
   )

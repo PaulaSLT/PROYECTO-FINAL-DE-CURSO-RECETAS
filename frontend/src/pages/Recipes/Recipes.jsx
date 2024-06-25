@@ -26,7 +26,7 @@ function Recipes() {
   return (
     <div>
       <Search handleInfo={handleFilteredRecipes} />
-      <div id="container">
+      <div id="recipes-container">
         {filteredMeals.length > 0
           ? filteredMeals.map(function (recipe, idx) {
               return <RecipesCard key={idx} recipe={recipe} />;
