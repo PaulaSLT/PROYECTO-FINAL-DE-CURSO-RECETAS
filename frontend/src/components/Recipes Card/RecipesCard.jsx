@@ -71,78 +71,102 @@ function RecipesCard({ recipe }) {
 
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card
+        sx={{ width:300, minHeight: 230, color: "black",  }}
+      >
         <CardActionArea>
-          <Button onClick={handleOpen}>
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
+          <CardMedia
+            component="img"
+            height="140"
+            image={recipe.strMealThumb}
+            alt={recipe.strMeal}
+            onClick={handleOpen}
+          />
+          <CardContent
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              gutterBottom
+              variant="h6"
+              component="div"
+              sx={{ color: "black" }}
             >
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  borderRadius: "16px",
-                  border: "2px solid white",
-                  padding: "10px",
-                  bgcolor: "#d0f0c0",
-                  color: "black",
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image={recipe.strMealThumb}
-                  alt={recipe.strMeal}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {recipe.strMeal}
-                  </Typography>
-                </CardContent>
-                <Typography variant="body2">
-                  <span id="ingredients">
-                    <p>Ingredients</p>
-                    <ul>
-                      {ingredients.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </span>
-                  <p>Cooking Instructions</p>
-                  <div id="Instructions">
-                    <ul>
-                      {instructions.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </Typography>
-              </Box>
-            </Modal>
-            <CardMedia
-              component="img"
-              height="140"
-              image={recipe.strMealThumb}
-              alt={recipe.strMeal}
-            />
-          </Button>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+              {recipe.strMeal}
+            </Typography>
+            {isFavorite ? (
+              <HeartSolidIcon
+                onClick={toggleFavorite}
+                className="iconBtn fav"
+              />
+            ) : (
+              <HeartOutlineIcon onClick={toggleFavorite} className="iconBtn" />
+            )}
+          </CardContent>
+        </CardActionArea>
+      </Card>
+
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{ maxWidth: "60vw" }}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            width: "100%",
+            left: "80%",
+            transform: "translate(-50%, -50%)",
+            borderRadius: "16px",
+            border: "2px solid white",
+            padding: "10px",
+            bgcolor: "#d0f0c0",
+            color: "black",
+          }}
+        >
+          <CardMedia
+            component="img"
+            height="140"
+            image={recipe.strMealThumb}
+            alt={recipe.strMeal}
+          />
+          <CardContent className="card-content">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              sx={{ color: "black" }}
+            >
               {recipe.strMeal}
             </Typography>
           </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary" onClick={toggleFavorite}>
-            {isFavorite ? <HeartSolidIcon /> : <HeartOutlineIcon />}
-          </Button>
-        </CardActions>
-      </Card>
+          <Typography variant="body2" sx={{ color: "black" }}>
+            <span id="ingredients">
+              <p>Ingredients</p>
+              <ul>
+                {ingredients.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </span>
+            <p>Cooking Instructions</p>
+            <div id="Instructions">
+              <ul>
+                {instructions.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </Typography>
+        </Box>
+      </Modal>
     </>
   );
 }
