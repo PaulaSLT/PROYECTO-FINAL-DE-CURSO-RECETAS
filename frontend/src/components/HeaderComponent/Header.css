@@ -10,6 +10,9 @@
 .headerContent {
   display: flex;
   flex-direction: row;
+  margin-left: 100px;
+  margin-right: 100px;
+  gap:30px
 }
 
 .boton {
