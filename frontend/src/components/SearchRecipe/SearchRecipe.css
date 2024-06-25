@@ -1,25 +1,22 @@
-
 #input-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    margin-right: 20px;
-    gap: 10px;
-    text-align: center;
-    border-radius: 20px; 
-    margin-top: 20px;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  margin-right: 20px;
+  gap: 10px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
-.inputSearch{
-    height: 100%;
-    padding: 12px;
-    width: 30%;
+.inputSearch {
+  height: 100%;
+  padding: 12px;
+  width: 30%;
 }
 
-#buttonSearch{
-    margin-top: 0px;
-    margin-bottom: 0px;
-
+#buttonSearch {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

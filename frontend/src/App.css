@@ -1,15 +1,12 @@
 
 #root{
-    background-image: url("../src/Images/BackBlanco.png");
     background-size: cover;
     min-height: 100vh;
-}
-div{
-    color: rgba(255, 251, 251, 0.874);
 }
 
 #homecontainer{
     display: flex;
+    margin-top: 200px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -26,7 +23,7 @@ div{
     color: blue;
     text-decoration: underline;
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 .parrafo{
     font-family: 'Times New Roman', Times, serif;

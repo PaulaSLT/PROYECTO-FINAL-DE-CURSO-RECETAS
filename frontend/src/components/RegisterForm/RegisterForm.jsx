@@ -9,7 +9,7 @@ function RegisterForm() {
   const [password, setPassword] = useState("");
   const [doublePass, setDoublePass] = useState("");
   const [email, setEmail] = useState("");
-  const [errs, setErrs] = useState(""); //Para mostrar si hay algún error
+  const [errs, setErrs] = useState(""); 
 
   const navigate = useNavigate();
 
@@ -28,21 +28,20 @@ function RegisterForm() {
           navigate('/')
         } else {
           setErrs(
-            "pass with at least 8 char: 1 caracter especial, 1 minuscula, 1 mayus"
+            "password with at least 8 characters: 1 special caracter , 1 lower case, 1 capital case"
           );
         }
-        // Optionally, handle successful signup (e.g., display a success message or redirect)
       } catch (error) {
         setErrs(error.message);
       }
     } else {
-      setErrs("Las contraseñas no coinciden");
+      setErrs("Passwords do not match");
     }
   }
 
   return (
     <div id="registercontainer">
-      <h1>Registrarse</h1>
+      <h1>Register</h1>
       <form className="form">
         <input
           placeholder="Enter your full name"
@@ -84,15 +83,30 @@ function RegisterForm() {
 
         <button onClick={handleClick}>Submit</button>
 
-        
-        <p>
-          You have an account
-          <span className="linkbutton" onClick={() => navigate("/login")}>
-            Log in!
-          </span>
-        </p>
+        <p>Do you have an account? </p>
+        <a
+          onClick={function () {
+            navigate("/login");
+          }}
+        >
+          Click here!
+        </a>
       </form>
 
+      <button
+        onClick={function () {
+          navigate("/");
+        }}
+      >
+        Back to Home
+      </button>
+
+      <p>
+        Do you have an account?
+        <span className="linkbutton" onClick={() => navigate("/login")}>
+          Log in!
+        </span>
+      </p>
       <UnregisterForm />
     </div>
   );

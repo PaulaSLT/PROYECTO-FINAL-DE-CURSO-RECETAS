@@ -1,11 +1,14 @@
-body {
+html, body {
   margin: 0;
-  background-image: url("../src/Images/FrontImage.webp");
-  background-size: cover;
+  padding: 0;
+  height: 100%;
   min-height: 100vh;
-  background-repeat: no-repeat;
 }
 
-#root {
-  height: 90vh;
+body {
+  background-image: url("../src/Images/BACKGROUND.png");
+  background-size: cover; /* Asegura que la imagen cubra todo el área */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen en el viewport */
 }
