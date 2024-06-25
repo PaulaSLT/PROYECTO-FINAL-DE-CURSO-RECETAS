@@ -80,13 +80,7 @@ function RecipesCard({ recipe }) {
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
             >
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  borderRadius: "16px",
+              <Box sx= {{
                   border: "2px solid white",
                   padding: "10px",
                   bgcolor: "#d0f0c0",

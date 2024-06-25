@@ -1,6 +1,6 @@
 #header{
    
-    color: rgb(243, 223, 223);
+    color: rgb(231, 209, 209);
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
@@ -21,6 +21,7 @@
     margin: 10px;
     padding: 5px;
     cursor: pointer;
+    color: rgba(71, 3, 3, 0.8)
     
 }
 
@@ -28,9 +29,6 @@
     font-weight: 600;
 }
 
-.logout {
-    color: rgba(255, 0, 0, 0.80)
-}
 
 .logout:hover {
     color: rgba(255, 0, 0, 0.945);
