@@ -4,12 +4,29 @@ import "./AboutUs.css"
 function AboutUs() {
 
   return (
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro optio neque nisi in molestiae excepturi voluptas impedit, unde repellendus dicta vero. Consequuntur sint voluptatum ratione tempore doloribus quia illo!
-        Dolor unde asperiores molestiae! Alias animi, iusto quasi exercitationem laudantium, eveniet laborum doloremque harum eius similique minima corporis nisi magni consequuntur libero a tempora ad? Nesciunt dignissimos animi quaerat. Aperiam.
-        A dignissimos ut incidunt natus obcaecati magnam tempore, sequi perspiciatis adipisci ipsa alias nulla nemo rerum harum fuga voluptate, laborum impedit aut id voluptatem. Minus nostrum quidem dolore quod accusamus.
+    <div className="aboutus">
+      <p>
+        <h1>Welcome to Jilorio World Tour!</h1>
+        <p>
+          At Jilorio World Tour, we bring the world's flavors to your kitchen
+          with a unique Canary Island touch. Our mission is to inspire hopme
+          cooks by offering a diverse collection of international recipes.
+          Discover, cook, and share recipes from around the globe, and join a
+          community of food enthusiast on an exciting culinary adventure. Letś
+          satisfy your hunger for new tastes and traditions!
+        </p>
+        
+        <h1>Our Story</h1>
+        <p>
+          Founded by passionate food lovers, Jilorio World Tour was born out of
+          a desire to explore and share the culinary wonders of the world. We
+          noticed that many home cooks often find themselves in a culinary rut,
+          repeating the same recipes and missing out on the rich variety of
+          global gastronomy, Tha's where we come in!
+        </p>
+      </p>
     </div>
-  )
+  );
 }
 
 export default AboutUs

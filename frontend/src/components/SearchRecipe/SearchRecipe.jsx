@@ -24,7 +24,6 @@ function Search({handleInfo}) {
       onChange={function(e){setInputValue(e.target.value)}}
       value={inputValue}
       />
-
       <button onClick={ handleClick } id='buttonSearch'>
       Explore new cuisines
       </button>
