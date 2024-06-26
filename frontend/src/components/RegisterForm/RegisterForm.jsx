@@ -70,7 +70,7 @@ function RegisterForm() {
           }}
         />
 
-        {password}
+       
         <input
           placeholder="Repeat your password"
           type="password"
