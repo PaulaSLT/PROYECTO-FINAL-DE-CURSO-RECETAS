@@ -3,6 +3,9 @@
     flex-direction: column;
     align-items: center;
 }
+h1{
+    color: white;
+}
 
 .form{
     width: 200px;
