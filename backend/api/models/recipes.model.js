@@ -10,17 +10,22 @@ const Recipe = sequelize.define('recipe', {
         type: DataTypes.STRING,
         allowNull: false,
       },
-    strIngredients: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        get() {
-          const strIngredients = this.getDataValue('strIngredients');
-          return strIngredients ? JSON.parse(strIngredients) : [];
-        },
-        set(value) {
-          this.setDataValue('strIngredients', JSON.stringify(value));
-        }
-      },
+     strIngredients: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+    get() {
+      const strIngredients = this.getDataValue('strIngredients');
+      try {
+        return strIngredients ? JSON.parse(strIngredients) : [];
+      } catch (error) {
+        console.error('Error parsing strIngredients JSON:', error);
+        return [];
+      }
+    },
+    set(value) {
+      this.setDataValue('strIngredients', JSON.stringify(value));
+    }
+  },
    
     strInstructions: {
         type: DataTypes.STRING,

@@ -21,3 +21,20 @@ export async function postRecipe(meal, ingredients, instruction, strMealThumb) {
         console.log(error)
     }
 } 
+
+
+export async function getRecipesCreatedByMe(){
+  try {
+    const {data} = await api.get('/recipe/me',
+      {
+        headers: {
+            authorization: localStorage.getItem('token')
+            }
+        },
+    )
+    return data
+  } catch (error) {
+     console.log(error)
+
+  }
+}

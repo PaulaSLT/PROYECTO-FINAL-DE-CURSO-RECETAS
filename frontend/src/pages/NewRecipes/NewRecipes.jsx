@@ -5,19 +5,26 @@ import React, { useState } from "react";
 import { postRecipe } from "../../services/recipe.service";
 import "./NewRecipes.css";
 import { Typography } from "@mui/material";
+import { Navigate, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function NewRecipes() {
   const [mealName, setMealName] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instruction, setInstruction] = useState("");
   const [measure, setMeasure] = useState('')
-
+  const navigate = useNavigate();
   const [ingredientes, setIngredientes] = useState([]);
 
   async function handleClick(event) {
     event.preventDefault();
-    const response = await postRecipe(mealName, ingredientes, instruction);
-    console.log(response);
+    await postRecipe(mealName, ingredientes, instruction);
+    
+    toast.success('Recipe created!')
+    
+    setTimeout(() => {
+        navigate('/myprofile')
+      }, 2000)
   }
 
   const renderList = () => {

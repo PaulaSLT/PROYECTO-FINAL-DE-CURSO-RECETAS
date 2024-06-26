@@ -79,27 +79,10 @@ function RegisterForm() {
           }}
         />
 
-        {errs && <p className="error">{errs}</p>}
-
         <button onClick={handleClick}>Submit</button>
 
-        <p>Do you have an account? </p>
-        <a
-          onClick={function () {
-            navigate("/login");
-          }}
-        >
-          Click here!
-        </a>
+        {errs && <p className="error">{errs}</p>}
       </form>
-
-      <button
-        onClick={function () {
-          navigate("/");
-        }}
-      >
-        Back to Home
-      </button>
 
       <p>
         Do you have an account?
