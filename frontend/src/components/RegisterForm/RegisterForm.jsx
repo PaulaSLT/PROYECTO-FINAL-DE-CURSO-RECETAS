@@ -82,14 +82,15 @@ function RegisterForm() {
         <button onClick={handleClick}>Submit</button>
 
         {errs && <p className="error">{errs}</p>}
+      
       </form>
-
-      <p>
-        Do you have an account?
-        <span className="linkbutton" onClick={() => navigate("/login")}>
-          Log in!
-        </span>
-      </p>
+          <p>
+                Do you have an account?
+            <span className="linkbutton" onClick={() => navigate("/login")}>
+                Log in!
+            </span>
+          </p>
+     
       <UnregisterForm />
     </div>
   );
