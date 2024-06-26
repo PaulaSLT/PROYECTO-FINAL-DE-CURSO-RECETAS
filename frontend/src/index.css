@@ -1,9 +1,4 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  min-height: 100vh;
-}
+
 
 body {
   background-image: url("../src/Images/BACKGROUND.png");
@@ -11,4 +6,6 @@ body {
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Fija la imagen en el viewport */
+  margin: 0;
+  margin-top: -25px;
 }
