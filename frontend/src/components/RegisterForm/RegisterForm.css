@@ -2,21 +2,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 5px 0;
+    background-color: rgb(49,49,49,0.521);
+    width: 20%;
+    height: 80%;
+    margin: 80px auto;
+    border-radius: 20px;
 }
-h1{
+h1, p{
     color: white;
 }
 
 .form{
     width: 200px;
-    height: 30px;   
+    height: 10px;   
     border-style: none;
+    
    
 }
 button{
-    width: 20vw;
+    width: 10vw;
     height: 50px;
-    margin-top: 200px;
+    margin-top: 20px;
     margin-bottom: 30px;   
     border-radius: 10px;
     background-color: rgb(248, 184, 177);
@@ -35,6 +42,9 @@ button:hover{
 input{
     border-style: none;
     box-shadow: 5px 5px 5px grey;
-    display: flex;
     align-items: center;
+    
+}
+.form input{
+    margin: 5px 0;
 }

@@ -51,7 +51,7 @@ function RegisterForm() {
           }}
         />
         <input
-          className="email"
+          
           placeholder="Enter your email"
           autoComplete="on"
           required
@@ -82,9 +82,7 @@ function RegisterForm() {
         <button onClick={handleClick}>Submit</button>
 
         {errs && <p className="error">{errs}</p>}
-      
-      </form>
-          <p>
+        <p>
                 Do you have an account?
             <span className="linkbutton" onClick={() => navigate("/login")}>
                 Log in!
@@ -92,6 +90,8 @@ function RegisterForm() {
           </p>
      
       <UnregisterForm />
+      </form>
+        
     </div>
   );
 }
