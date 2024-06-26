@@ -33,7 +33,7 @@ function LoginForm() {
 
   return (
     <div id='logincontainer'>
-      <h1>Sign in</h1>
+      <h1>Login</h1>
       <form className="form">
         <input
           placeholder="Enter your email"
@@ -47,7 +47,7 @@ function LoginForm() {
         /> 
         {errs && <span>{errs}</span>} 
         <button className="enviar" onClick={handleClick}>Submit</button>
-        <p>Have not an account? <span className="linkbutton" onClick={()=> navigate("/register")}>Register now!</span></p>
+        <p>Don't you have an account? <span className="linkbutton" onClick={()=> navigate("/register")}>Register now!</span></p>
         </form>
       
 
