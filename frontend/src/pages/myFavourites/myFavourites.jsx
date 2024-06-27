@@ -19,7 +19,7 @@ function MyFavorite() {
 
   return (
     <>
-      <h2 className="title-newrecipes"> FAVOURITE </h2>
+      <h2 className="title-newrecipes"> Favourites </h2>
 
       <div id="recipes-container">
         {favRecipe.length > 0 ? (
