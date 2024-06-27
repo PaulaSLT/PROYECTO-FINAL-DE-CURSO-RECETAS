@@ -41,7 +41,7 @@ function RegisterForm() {
 
   return (
     <div id="registercontainer">
-      <h1>Register</h1>
+      <h1 style={{color:"white"}}>Register</h1>
       <form className="form">
         <input
           placeholder="Enter your full name"
@@ -89,7 +89,6 @@ function RegisterForm() {
             </span>
           </p>
      
-      <UnregisterForm />
       </form>
         
     </div>

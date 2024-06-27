@@ -17,7 +17,7 @@ function UnregisterForm() {
   return (
     <>
      
-        <button type="button" onClick={handleUnregister}>Unsubscribe</button>
+        <button type="button" id='btnUnRegister' onClick={handleUnregister}>Unsubscribe</button>
       
     </>
   );

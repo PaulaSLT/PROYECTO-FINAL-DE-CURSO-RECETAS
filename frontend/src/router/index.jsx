@@ -49,6 +49,7 @@ export const router = createBrowserRouter([
       {
         path: "/newrecipe",
         element: <NewRecipes />,
+        loader: () => logged(),
       },
       {
         path: "/aboutus",

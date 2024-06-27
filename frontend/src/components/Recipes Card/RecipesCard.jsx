@@ -110,24 +110,27 @@ function RecipesCard({ recipe, img = null, isFav = null, handleFav = null }) {
             >
               {recipe.strMeal}
             </Typography>
-            {isFavorite || isFav ? (
-              <HeartSolidIcon
-                onClick={() => {
-                  handleAddFavourite(recipe.idMeal ? recipe.idMeal : recipe.id);
-                }}
-                className="iconBtn fav"
-              />
-            ) : (
-              <HeartOutlineIcon
-                onClick={() =>
-                  handleAddFavourite(
-                    recipe.idMeal
-                      ? { externalId: recipe.idMeal }
-                      : { recipeId: recipe.id }
-                  )
-                }
-                className="iconBtn"
-              />
+            {localStorage.getItem('token') && (
+              isFavorite || isFav ? (
+                <HeartSolidIcon
+                  onClick={() => {
+                    handleAddFavourite(recipe.idMeal ? recipe.idMeal : recipe.id);
+                  }}
+                  className="iconBtn fav"
+                />
+              ) : (
+                <HeartOutlineIcon
+                  onClick={() =>
+                    handleAddFavourite(
+                      recipe.idMeal
+                        ? { externalId: recipe.idMeal }
+                        : { recipeId: recipe.id }
+                    )
+                  }
+                  className="iconBtn"
+                />
+              )
+              
             )}
           </CardContent>
         </CardActionArea>
