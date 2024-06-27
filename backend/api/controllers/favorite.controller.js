@@ -3,26 +3,22 @@ const Recipe = require('../models/recipes.model')
 const User = require('../models/user.model')
 const fetch = require('node-fetch')
 
-// Añadir favorito
 const addFavourite = async (req, res) => {
   const { externalId, recipeId} = req.body
   
 
   try {
-    // Validar que al menos uno de los IDs esté presente
     if (!externalId && !recipeId) {
       return res
         .status(400)
         .json({error: 'Debe proporcionar un externalRecipeId o un recipeId.'})
     }
 
-    // Verificar que el usuario exista
     const user = await User.findByPk(res.locals.user.id)
     if (!user) {
       return res.status(404).json({error: 'Usuario no encontrado.'})
     }
 
-    // Crear el favorito
     const favouriteData = {
       userId: user.id,
       isExternal: !!externalId,
@@ -38,35 +34,29 @@ const addFavourite = async (req, res) => {
   }
 }
 
-// Obtener favoritos
 const getFavouriteRecipes = async (req, res) => {
   const {id} = res.locals.user
 
   try {
-    // Verificar que el usuario exista
     const user = await User.findByPk(id)
     if (!user) {
       return res.status(404).json({error: 'Usuario no encontrado.'})
     }
 
-    // Obtener los favoritos del usuario
     const favourites = await Favourite.findAll({
       where: {userId: id},
       include: [Recipe],
     })
 
-    // Obtener detalles de recetas externas si es necesario
     const favouriteRecipes = await Promise.all(
       favourites.map(async (favourite) => {
         if (favourite.isExternal) {
-          // Hacer una petición a la API externa
           const response = await fetch(
             `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${favourite.externalId}`
           )
           const data = await response.json()
           return data.meals[0]
         } else {
-          // Retornar la receta interna directamente
           return favourite.recipe
         }
       })
@@ -80,9 +70,7 @@ const getFavouriteRecipes = async (req, res) => {
 }
 
 
-/**
- * Delete favourite recipe
- */
+
 
 const deleteFavourite = async (req, res) => {
   const {recipeId} = req.params
