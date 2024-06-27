@@ -1,8 +1,13 @@
-const { getMyFavorites } = require("../controllers/favorites.controller");
-const { checkAuth } = require("../middlewares/auth.middlewares");
-const router = require("express").Router();
+const router = require('express').Router()
+const {
+  getFavouriteRecipes,
+  addFavourite,
+  deleteFavourite,
+} = require('../controllers/favorite.controller')
+const {checkAuth} = require('../middlewares/auth.middlewares')
 
-router.get('/', checkAuth,  getMyFavorites)
-
+router.get('/', checkAuth, getFavouriteRecipes)
+router.post('/', checkAuth, addFavourite)
+router.delete('/:recipeId', checkAuth, deleteFavourite)
 
 module.exports = router

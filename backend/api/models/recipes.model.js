@@ -26,9 +26,8 @@ const Recipe = sequelize.define('recipe', {
       this.setDataValue('strIngredients', JSON.stringify(value));
     }
   },
-   
     strInstructions: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       }, 
 

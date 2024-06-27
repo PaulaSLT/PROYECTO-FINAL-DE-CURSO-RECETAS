@@ -1,45 +1,27 @@
-const Recipe = require("../api/models/recipes.model");
-const User = require("../api/models/user.model");
-const Area = require("../api/models/area.model");
+const Recipe = require('../api/models/recipes.model')
+const User = require('../api/models/user.model')
+const Area = require('../api/models/area.model')
+const Favourite = require('../api/models/favourite.model')
 
 
-function  initRelationships() {
+function initRelationships() {
   try {
-    Area.hasOne(Recipe, { onDelete: "CASCADE", onUpdate: "CASCADE" });
-    Recipe.belongsTo(Area);
+    Area.hasOne(Recipe, {onDelete: 'CASCADE', onUpdate: 'CASCADE'})
+    Recipe.belongsTo(Area)
 
-    User.hasMany(Recipe, { onDelete: "CASCADE", onUpdate: "CASCADE" });
-    Recipe.belongsTo(User);
+    User.hasMany(Recipe, {onDelete: 'CASCADE', onUpdate: 'CASCADE'})
+    Recipe.belongsTo(User)
 
-    User.belongsToMany(Recipe, {
-      through: {
-        model: 'Favourites',
-        unique: false,
-        timestamps: false,
-      },
-      as: 'favourites',     
-      onDelete: "CASCADE",
-      onUpdate: "CASCADE",
-      foreignKey: 'userId',
-    });
-    Recipe.belongsToMany(User, {
-       through: {
-        model: 'Favourites',
-        unique: false,
-        timestamps: false,
-      },
-       as: 'favouritedBy',
-      onDelete: "CASCADE",
-      onUpdate: "CASCADE",
-      foreignKey: 'recipeId',
-    });
+    User.hasMany(Favourite, {onDelete: 'CASCADE', onUpdate: 'CASCADE'})
+    Favourite.belongsTo(User)
 
+    Recipe.hasMany(Favourite, {onDelete: 'CASCADE', onUpdate: 'CASCADE'})
+    Favourite.belongsTo(Recipe)
   } catch (error) {
-    throw new Error("Error adding relations to models", error);
+    throw new Error('Error adding relations to models', error)
   }
 }
 
-
 module.exports = {
   initRelationships,
-};
+}
