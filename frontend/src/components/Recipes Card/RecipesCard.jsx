@@ -8,8 +8,12 @@ import React, { useEffect, useState } from "react";
 import { HeartIcon as HeartOutlineIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartSolidIcon } from "@heroicons/react/24/solid";
 import { getAllInformationFromMeal } from "../../services/theMealDb.service";
+import {
+  addFavouriteRecipe,
+  deleteFavouriteRecipe,
+} from "../../services/favourite.service";
 
-function RecipesCard({ recipe, img = null }) {
+function RecipesCard({ recipe, img = null, isFav = null, handleFav = null }) {
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -38,7 +42,7 @@ function RecipesCard({ recipe, img = null }) {
   }, [recipe]);
 
   const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
+    setIsFavorite((prevIsFavorite) => !prevIsFavorite);
   };
 
   useEffect(() => {
@@ -68,6 +72,17 @@ function RecipesCard({ recipe, img = null }) {
     }
   }, [recipe]);
 
+  async function handleAddFavourite(recipe) {
+    toggleFavorite();
+    console.log(recipe);
+    if (!isFavorite) {
+      await addFavouriteRecipe(recipe);
+    } else {
+      await deleteFavouriteRecipe(recipe);
+    }
+    if (isFavorite !== null) handleFav(!isFav);
+  }
+
   return (
     <>
       <Card sx={{ width: 300, minHeight: 230, color: "black" }}>
@@ -95,13 +110,24 @@ function RecipesCard({ recipe, img = null }) {
             >
               {recipe.strMeal}
             </Typography>
-            {isFavorite ? (
+            {isFavorite || isFav ? (
               <HeartSolidIcon
-                onClick={toggleFavorite}
+                onClick={() => {
+                  handleAddFavourite(recipe.idMeal ? recipe.idMeal : recipe.id);
+                }}
                 className="iconBtn fav"
               />
             ) : (
-              <HeartOutlineIcon onClick={toggleFavorite} className="iconBtn" />
+              <HeartOutlineIcon
+                onClick={() =>
+                  handleAddFavourite(
+                    recipe.idMeal
+                      ? { externalId: recipe.idMeal }
+                      : { recipeId: recipe.id }
+                  )
+                }
+                className="iconBtn"
+              />
             )}
           </CardContent>
         </CardActionArea>
@@ -148,9 +174,15 @@ function RecipesCard({ recipe, img = null }) {
             <span id="ingredients">
               <p>Ingredients</p>
               <ul>
-                {ingredients.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+                {ingredients?.length > 0
+                  ? ingredients.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))
+                  : recipe?.strIngredients?.map((item, index) => (
+                      <li key={index}>
+                        {item.strIngredients} - {item.strMeasure}
+                      </li>
+                    ))}
               </ul>
             </span>
             <p>Cooking Instructions</p>
